@@ -1,5 +1,4 @@
 {
-    "heading": "Hi I Am <strong>{{name}}</strong>",
-    "subheading": "I am a passionate Java Software Engineer and mathematician with expertise in core Java, Spring Framework, and Microservices Architecture. Eager to learn new technologies and stay updated on industry trends. I enjoy sharing knowledge and collaborating with the community. Additionally, I have experience with React and Next.js for front-end development.",
-    "buttonText": "Download CV"
+    "title": "Projects",
+    "subtitle": "Some of my recent projects"
 }
