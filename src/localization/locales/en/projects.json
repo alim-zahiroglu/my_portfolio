@@ -1,22 +1,4 @@
 {
     "title": "Projects",
-    "subtitle": "Some of my recent projects",
-    "projects": [
-        {
-            "title": "Ticketing App",
-            "description": "This app serves as a versatile project management solution"
-        },
-        {
-            "title": "Accounting App",
-            "description": "This project is a web-based accounting system designed as a Software as a Service (SaaS)"
-        },
-        {
-            "title": "Ecommerce Backend Project",
-            "description": "This is a simple e-commerce backend application secured with Keycloak"
-        },
-        {
-            "title": "Etlas Business Management App",
-            "description": "This is a comprehensive business management application with capabilities for tracking user actions and generating reports"
-        }
-    ]
+    "subtitle": "Some of my recent projects"
 }
