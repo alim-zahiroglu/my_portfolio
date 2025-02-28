@@ -19,5 +19,11 @@
         "Ecommerce Backend Project": "https://ecommerce.uydev.net",
         "Etlas Business Management App": "https://etlas.uydev.net",
         "default": "https://uydev.net"
+    },
+    "skillsLogos": {
+        "FrontEnd": "/src/assets/images/skills/react.png",
+        "UI & Graphic Design": "/src/assets/images/skills/ps.png",
+        "BackEnd": "/src/assets/images/skills/backend.png",
+        "default": "/src/assets/images/skills/backend.png"
     }
 }

@@ -7,11 +7,13 @@ import enHeader from './locales/en/header.json'
 import enHero from './locales/en/hero.json'
 import enprojects from './locales/en/projects.json'
 import enprojectsButtonText from './locales/en/projectsButtonText.json'
+import enskills from './locales/en/skills.json'
 
 import trHeader from './locales/tr/header.json'
 import trHero from './locales/tr/hero.json'
 import trprojects from './locales/tr/projects.json'
 import trprojectsButtonText from './locales/tr/projectsButtonText.json'
+import trskills from './locales/tr/skills.json'
 
 const resources = {
     en: {
@@ -19,6 +21,7 @@ const resources = {
         hero: enHero,
         projects: enprojects,
         projectsButtonText: enprojectsButtonText,
+        skills: enskills,
 
 
     },
@@ -27,6 +30,7 @@ const resources = {
         hero: trHero,
         projects: trprojects,
         projectsButtonText: trprojectsButtonText,
+        skills: trskills,
     },
 };
 

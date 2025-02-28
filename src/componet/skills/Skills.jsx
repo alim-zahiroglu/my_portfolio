@@ -1,22 +1,22 @@
 // import content
-import { skills } from "../../content/Contents";
+import { useSkills } from "../../content/Contents";
 
 
 const Skills = () => {
-
+    const { title, subtitle, skills_content } = useSkills();
     return (
         <div className="min-h-fit bg-theme_bg" id="skills">
             {/* content */}
             <div className="md:container px-5  py-14 mt-[80px]">
                 <h1 className="title text-3xl ext-theme_bg_copy" data-aos="fade-down">
-                    {skills.title}
+                    {title}
                 </h1>
                 <h1 className="font-paprika text-3xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
-                    {skills.subtitle}
+                    {subtitle}
                 </h1>
                 <br />
                 <div className="flex flex-wrap gap-4 justify-center">
-                    {skills.skills_content.map((skill, i) => (
+                    {skills_content.map((skill, i) => (
                         <div
                             key={i}
                             data-aos="fade-up"

@@ -1,6 +1,5 @@
 
 // import icons from react-icons
-import { MdArrowForward } from "react-icons/md";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
@@ -122,45 +121,38 @@ const getDetailsForProject = (projectTitle) => {
 };
 
 
-export const skills = {
-    title: "Skills",
-    subtitle: "MY TOP SKILLS",
-    skills_content: [
-        {
-            name: "BackEnd",
-            description: "BackEnd development with Java Spring Boot",
-            logo: backend,
-            skills: [
-                'Java',
-                'Spring-boot',
-                'Hibernate',
-                'SQL',
-                'Restful API',
-                'Kafka',
+export const useSkills = () => {
+    const { t } = useTranslation('skills');
 
-            ]
-        },
-        {
-            name: "FrontEnd",
-            description: "FrontEnd devolopment with React",
-            logo: reactjs,
-            icons: [
+    return {
+        title: t('title'),
+        subtitle: t('subtitle'),
+        skills_content: [
+            {
+                name: t('skills_content.0.name'),
+                description: t('skills_content.0.description'),
+                skills: t('skills_content.0.skills', { returnObjects: true }),
+                logo: getLogo(t('skills_content.0.name')),
+            },
+            {
+                name: t('skills_content.1.name'),
+                description: t('skills_content.1.description'),
+                skills: t('skills_content.1.skills', { returnObjects: true }),
+                logo: getLogo(t('skills_content.1.name')),
+            },
+            {
+                name: t('skills_content.2.name'),
+                description: t('skills_content.2.description'),
+                skills: t('skills_content.2.skills', { returnObjects: true }),
+                logo: getLogo(t('skills_content.2.name')),
+            }
+        ]
+    };
+};
 
-            ]
-        },
-        {
-            name: "UI & Graphic Design",
-            description: "UI & Graphic Design with adobe apps",
-            logo: ps,
-            skills: [
-
-            ]
-        }
-    ],
-    icon: MdArrowForward,
-}
-
-
+const getLogo = (skills_name) => {
+    return unchangeable.skillsLogos[skills_name] || unchangeable.skillsLogos["default"];
+};
 
 export const popUpMenuecontent = {
 

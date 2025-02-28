@@ -1,0 +1,28 @@
+{
+    "title": "Skills",
+    "subtitle": "MY TOP SKILLS",
+    "skills_content": [
+        {
+            "name": "BackEnd",
+            "description": "BackEnd development with Java Spring Boot",
+            "skills": [
+                "Java",
+                "Spring-boot",
+                "Hibernate",
+                "SQL",
+                "Restful API",
+                "Kafka"
+            ]
+        },
+        {
+            "name": "FrontEnd",
+            "description": "FrontEnd development with React",
+            "skills": []
+        },
+        {
+            "name": "UI & Graphic Design",
+            "description": "UI & Graphic Design with Adobe apps",
+            "skills": []
+        }
+    ]
+}
