@@ -5,11 +5,7 @@ import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
-import ticketing from '../assets/images/projects/ui-project-1.jpg';
-import accounting from '../assets/images/projects/ui-project-2.jpg';
-import ecommerceBackend from '../assets/images/projects/web-project-1.jpg';
-import etlasBusiness from '../assets/images/projects/web-project-2.jpg';
-
+import unchangeable from '../localization/locales/en/unchangeable.json';
 import backend from "../assets/images/skills/backend.png";
 import ps from "../assets/images/skills/ps.png";
 import reactjs from "../assets/images/skills/react.png";
@@ -25,7 +21,7 @@ export const useHeaderMenu = () => {
 
     return {
         logoLetter: {
-            logo: t('logoLetter', { logoName: 'Ziya' }),
+            logo: t('logoLetter', { logoName: 'Alim' }),
             link: '#aboutme',
         },
 
@@ -64,7 +60,7 @@ export const useHeroContent = (themeMode) => {
 
     return {
         textContent: {
-            heading: t('heading', { name: 'Ziya Kasgari' }),
+            heading: t('heading', { name: 'Alim Zahiroglu' }),
             subheading: t('subheading'),
             buttonText: t('buttonText'),
         },
@@ -91,69 +87,40 @@ export const useProjectsContent = () => {
     };
 };
 
+export const useProjectsButtonText = () => {
+    const { t } = useTranslation('projectsButtonText');
+
+    return {
+        githubRepo: t('githubRepo'),
+        liveDemo: t('liveDemo'),
+        aboutPro: t('aboutPro'),
+    };
+}
+
 // Helper function to set images based on project title
+
 const getImageForProject = (projectTitle) => {
-    switch (projectTitle) {
-        case 'Ticketing App':
-            return ticketing;
-        case 'Accounting App':
-            return accounting;
-        case 'Ecommerce Backend Project':
-            return ecommerceBackend;
-        case 'Etlas Business Management App':
-            return etlasBusiness;
-        default:
-            return defaultImage;
-    }
+    return unchangeable.projectsImages[projectTitle] || unchangeable.projectsImages["default"];
 };
 
 // Helper function to set gitHub links based on project title
-const getGitHubLinkForProject = (projectTitle) => {
-    switch (projectTitle) {
-        case 'Ticketing App':
-            return 'https://github.com/koltikin/ticketing-applicaton';
-        case 'Accounting App':
-            return 'https://github.com/koltikin/my-accounting-app';
-        case 'Ecommerce Backend Project':
-            return 'https://github.com/koltikin/uydev-ecommerce';
-        case 'Etlas Business Management App':
-            return 'https://github.com/koltikin/Etlas';
-        default:
-            return 'https://github.com/koltikin';
-    }
+
+const getGitHubLinkForProject = (index) => {
+    return unchangeable.gitHubLinkForProject[index] || unchangeable.projectsImages["default"];
 };
 
 // Helper function to set live demo based on project title
+
 const getLiveDemoLinkForProject = (projectTitle) => {
-    switch (projectTitle) {
-        case 'Ticketing App':
-            return 'https://ticketing.uydev.com.tr';
-        case 'Accounting App':
-            return 'https://accounting.uydev.com.tr';
-        case 'Ecommerce Backend Project':
-            return 'https://ecommerce.uydev.com.tr';
-        case 'Etlas Business Management App':
-            return 'https://etlas.uydev.com.tr';
-        default:
-            return 'https://uydev.com.tr';
-    }
+    return unchangeable.liveDemoLinkForProject[projectTitle] || unchangeable.projectsImages["default"];
 };
 
 // Helper function to set images based on project title
+
 const getDetailsForProject = (projectTitle) => {
-    switch (projectTitle) {
-        case 'Ticketing App':
-            return ticketing;
-        case 'Accounting App':
-            return accounting;
-        case 'Ecommerce Backend Project':
-            return ecommerceBackend;
-        case 'Etlas Business Management App':
-            return etlasBusiness;
-        default:
-            return defaultImage;
-    }
+    return unchangeable.projectsImages[projectTitle] || unchangeable.projectsImages["default"];
 };
+
 
 export const skills = {
     title: "Skills",

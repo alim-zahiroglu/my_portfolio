@@ -9,13 +9,13 @@ const SocialMediaIcons = () => {
             <a href="https://www.linkedin.com/in/alim-zahiroglu" target="_blank" rel="noopener noreferrer">
                 <Icon icon='basil:linkedin-outline' height='26' width='26' className={iconClass} />
             </a>
-            <a href="https://github.com/koltikin" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/alim-zahiroglu" target="_blank" rel="noopener noreferrer">
                 <Icon icon='proicons:github' height='26' width='26' className={iconClass} />
             </a>
             <a href="https://www.youtube.com/@alim-zahiroglu" target="_blank" rel="noopener noreferrer">
                 <Icon icon='basil:youtube-outline' height='26' width='26' className={iconClass} />
             </a>
-            <a href="mailto:koltikin210@gmail.com">
+            <a href="mailto:alim@uydev.net">
                 <Icon icon='mdi:email-outline' height='26' width='26' className={iconClass} />
             </a>
         </div>

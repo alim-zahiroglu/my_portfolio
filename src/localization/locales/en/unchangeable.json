@@ -1,0 +1,23 @@
+{
+    "projectsImages": {
+        "Ticketing App": "/src/assets/images/projects/ui-project-1.jpg",
+        "Accounting App": "/src/assets/images/projects/ui-project-2.jpg",
+        "Ecommerce Backend Project": "/src/assets/images/projects/web-project-1.jpg",
+        "Etlas Business Management App": "/src/assets/images/projects/web-project-2.jpg",
+        "default": "/src/assets/images/projects/default.jpg"
+    },
+    "gitHubLinkForProject": {
+        "Ticketing App": "https://github.com/alim-zahiroglu/ticketing-applicaton",
+        "Accounting App": "https://github.com/alim-zahiroglu/my-accounting-app",
+        "Ecommerce Backend Project": "https://github.com/alim-zahiroglu/uydev-ecommerce",
+        "Etlas Business Management App": "https://github.com/alim-zahiroglu/Etlas",
+        "default": "https://github.com/alim-zahiroglu"
+    },
+    "liveDemoLinkForProject": {
+        "Ticketing App": "https://ticketing.uydev.net",
+        "Accounting App": "https://accounting.uydev.net",
+        "Ecommerce Backend Project": "https://ecommerce.uydev.net",
+        "Etlas Business Management App": "https://etlas.uydev.net",
+        "default": "https://uydev.net"
+    }
+}
