@@ -3,29 +3,34 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector'; // Import the language detector
 
-import enCommon from './locales/en/common.json'
 import enHeader from './locales/en/header.json'
 import enHero from './locales/en/hero.json'
+import enprojects from './locales/en/projects.json'
+import enprojectsButtonText from './locales/en/projectsButtonText.json'
+import enskills from './locales/en/skills.json'
 
-import trCommon from './locales/tr/common.json'
 import trHeader from './locales/tr/header.json'
 import trHero from './locales/tr/hero.json'
-import projects from './locales/en/projects.json'
+import trprojects from './locales/tr/projects.json'
+import trprojectsButtonText from './locales/tr/projectsButtonText.json'
+import trskills from './locales/tr/skills.json'
 
 const resources = {
     en: {
-        common: enCommon,
         header: enHeader,
         hero: enHero,
-        projects: projects,
+        projects: enprojects,
+        projectsButtonText: enprojectsButtonText,
+        skills: enskills,
 
 
     },
     tr: {
-        common: trCommon,
         header: trHeader,
         hero: trHero,
-        projects: projects,
+        projects: trprojects,
+        projectsButtonText: trprojectsButtonText,
+        skills: trskills,
     },
 };
 

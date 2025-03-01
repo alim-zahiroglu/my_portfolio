@@ -1,0 +1,22 @@
+{
+    "title": "Projeler",
+    "subtitle": "Bazı son projelerim",
+    "projects": [
+        {
+            "title": "Ticketing App",
+            "description": "Bu uygulama, çok yönlü bir proje yönetim çözümü olarak hizmet verir"
+        },
+        {
+            "title": "Accounting App",
+            "description": "Bu proje, Yazılım olarak Hizmet (SaaS) olarak tasarlanmış web tabanlı bir muhasebe sistemidir"
+        },
+        {
+            "title": "Ecommerce Backend Project",
+            "description": "Bu, Keycloak ile güvence altına alınmış basit bir e-ticaret backend uygulamasıdır"
+        },
+        {
+            "title": "Etlas Business Management App",
+            "description": "Bu, kullanıcı eylemlerini izleme ve raporlar oluşturma yeteneklerine sahip kapsamlı bir iş yönetimi uygulamasıdır"
+        }
+    ]
+}

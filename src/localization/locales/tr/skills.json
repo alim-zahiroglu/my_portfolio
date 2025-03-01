@@ -1,0 +1,28 @@
+{
+    "title": "Beceriler",
+    "subtitle": "EN İYİ BECERİLERİM",
+    "skills_content": [
+        {
+            "name": "BackEnd",
+            "description": "Java Spring Boot ile BackEnd geliştirme",
+            "skills": [
+                "Java",
+                "Spring-boot",
+                "Hibernate",
+                "SQL",
+                "Restful API",
+                "Kafka"
+            ]
+        },
+        {
+            "name": "FrontEnd",
+            "description": "React ile FrontEnd geliştirme",
+            "skills": []
+        },
+        {
+            "name": "UI ve Grafik Tasarım",
+            "description": "Adobe uygulamaları ile UI ve Grafik Tasarım",
+            "skills": []
+        }
+    ]
+}

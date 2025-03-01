@@ -2,12 +2,12 @@ import React from 'react'
 import { FaGithub } from 'react-icons/fa';
 import { AiOutlineGlobal } from "react-icons/ai";
 import Butttons from './Butttons';
-import { useProjectsContent } from '../../content/Contents';
+import { useProjectsButtonText, useProjectsContent } from '../../content/Contents';
 
 
 function Projects() {
     const { title, subtitle, projects } = useProjectsContent();
-    console.log(projects)
+    const { githubRepo, liveDemo, aboutPro } = useProjectsButtonText();
     return (
         <div id='projects' className='w-[100%] bg-theme_bg'>
             <div className='container mt-[80px]'>
@@ -28,9 +28,9 @@ function Projects() {
                                 <h3 className='text-xl font-bold text-theme_fg_copy mb-2'>{project.title}</h3>
                                 <p className='mb-4 text-theme_bg_copy'>{project.description}</p>
                                 <div className='flex justify-center gap-2 items-center mt-8'>
-                                    <Butttons link={project.links.githubLink} icon={FaGithub} text='GitHub Repo' />
-                                    <Butttons link={project.links.liveDemo} icon={AiOutlineGlobal} text='Live Demo' />
-                                    <Butttons link={project.links.details} text='About Pro' />
+                                    <Butttons link={project.links.githubLink} icon={FaGithub} text={githubRepo} />
+                                    <Butttons link={project.links.liveDemo} icon={AiOutlineGlobal} text={liveDemo} />
+                                    <Butttons link={project.links.details} text={aboutPro} />
                                 </div>
                             </div>
                         </div>
