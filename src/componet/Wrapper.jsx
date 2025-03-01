@@ -7,6 +7,8 @@ import Projects from './projects/Projects'
 import Skills from './skills/Skills'
 import SocialMediaIcons from './socialMediaIcons/SocialMediaIcons'
 import ThemeIcons from './themes/ThemeIcons'
+import Contact from './contact/Contact'
+import Footer from './footer'
 
 function Wrapper() {
 
@@ -18,6 +20,8 @@ function Wrapper() {
             <Hero />
             <Projects />
             <Skills />
+            <Contact />
+            <Footer />
             <PopupMenue />
         </>
     )

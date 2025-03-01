@@ -5,7 +5,7 @@ import { useSkills } from "../../content/Contents";
 const Skills = () => {
     const { title, subtitle, skills_content } = useSkills();
     return (
-        <div className="min-h-fit bg-theme_bg" id="skills">
+        <div className="min-h-fit bg-theme_fg" id="skills">
             {/* content */}
             <div className="md:container px-5  py-14 mt-[80px]">
                 <h1 className="title text-3xl ext-theme_bg_copy" data-aos="fade-down">
@@ -21,7 +21,7 @@ const Skills = () => {
                             key={i}
                             data-aos="fade-up"
                             data-aos-delay={i * 400}
-                            className="sm:cursor-pointer bg-theme_fg
+                            className="sm:cursor-pointer bg-theme_bg
                        relative group w-full flex flex-col
                        p-5 max-w-sm rounded-md border-2 border-theme_border"
                         >

@@ -9,7 +9,7 @@ function Hero() {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const { textContent, image } = useHeroContent(themeMode);
     return (
-        <div id='aboutme' className='relative overflow-hidden bg-theme_bg min-h-[550px] sm:min-h-[650px] flex items-center'>
+        <div id='aboutme' className='relative overflow-hidden bg-theme_fg min-h-[550px] sm:min-h-[650px] flex items-center'>
             <div className='h-[700px] w-[700px] bg-secondary_light absolute -top-1/2 right-0 rounded-3xl rotate-45'></div>
 
             <div className='container pb-8 sm:pb-0 mt-20'>

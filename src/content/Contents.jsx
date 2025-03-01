@@ -5,14 +5,17 @@ import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import unchangeable from '../localization/locales/en/unchangeable.json';
-import backend from "../assets/images/skills/backend.png";
-import ps from "../assets/images/skills/ps.png";
-import reactjs from "../assets/images/skills/react.png";
 
 import { useTranslation } from "react-i18next";
 
 import developer from '../assets/images/hero/developer.svg';
 import developer_dark from '../assets/images/hero/developer-dark.svg';
+
+
+import { GrMail } from "react-icons/gr";
+import { MdArrowForward, MdCall } from "react-icons/md";
+import { BsInstagram } from "react-icons/bs";
+import { u } from "framer-motion/client";
 
 export const useHeaderMenu = () => {
 
@@ -180,6 +183,39 @@ export const popUpMenuecontent = {
     ],
 
 }
+
+export const contact = {
+    title: "Contact Me",
+    subtitle: "GET IN TOUCH",
+    social_media: [
+        {
+            text: "alim@uydev.net",
+            icon: "ic:round-email",
+            link: "mailto:alim@uydev.net",
+        },
+        {
+            text: unchangeable.contacts.phone,
+            icon: "ri:whatsapp-fill",
+            link: "https://wa.me/" + unchangeable.contacts.wahtsapp,
+        },
+        {
+            text: "LinkedIn",
+            icon: "ri:linkedin-fill",
+            link: unchangeable.socialMediaLinks.linkedin,
+        },
+        {
+            text: "GitHub",
+            icon: "uil:github",
+            link: unchangeable.socialMediaLinks.github,
+        },
+        {
+            text: "YouTube",
+            icon: "uil:youtube",
+            link: unchangeable.socialMediaLinks.youtube,
+        },
+
+    ],
+};
 
 
 

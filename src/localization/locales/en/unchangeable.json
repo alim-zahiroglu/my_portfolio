@@ -25,5 +25,16 @@
         "UI & Graphic Design": "/src/assets/images/skills/ps.png",
         "BackEnd": "/src/assets/images/skills/backend.png",
         "default": "/src/assets/images/skills/backend.png"
+    },
+    "socialMediaLinks": {
+        "github": "https://github.com/alim-zahiroglu",
+        "linkedin": "https://www.linkedin.com/in/alim-zahiroglu",
+        "youtube": "https://www.youtube.com/@alim-zahiroglu",
+        "email": "mailto:alim@uydev.net"
+    },
+    "contacts": {
+        "phone": "+90 505 957 92 77",
+        "wahtsapp": "+905059579277",
+        "email": "alim@uydev.net"
     }
 }
