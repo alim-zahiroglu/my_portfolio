@@ -189,9 +189,9 @@ export const contact = {
     subtitle: "GET IN TOUCH",
     social_media: [
         {
-            text: "alim@uydev.net",
+            text: unchangeable.contacts.email,
             icon: "ic:round-email",
-            link: "mailto:alim@uydev.net",
+            link: "mailto:" + unchangeable.contacts.email,
         },
         {
             text: unchangeable.contacts.phone,
