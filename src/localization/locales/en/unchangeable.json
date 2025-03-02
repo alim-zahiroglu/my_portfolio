@@ -36,5 +36,11 @@
         "phone": "+90 505 957 92 77",
         "wahtsapp": "+905059579277",
         "email": "alim@uydev.net"
+    },
+    "servicesIcon": {
+        "001": "mingcute:code-fill",
+        "002": "fa-solid:laptop-code",
+        "003": "fa6-solid:paintbrush",
+        "default": "solar:code-square-broken"
     }
 }

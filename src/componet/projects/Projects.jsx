@@ -18,7 +18,7 @@ function Projects() {
                     <h1
                         data-aos="fade-down"
                         data-aos-delay={200}
-                        className='text-theme_bg_copy/60 sm:text-2xl text-2xl px-5 sm:px-0 sm:text-start font-paprika mb-[20px] sm:mb-[40px] pt-2'>{subtitle}
+                        className='text-secondary/80 sm:text-2xl text-2xl px-5 sm:px-0 sm:text-start font-paprika mb-[20px] sm:mb-[40px] pt-2' >{subtitle}
                     </h1>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>

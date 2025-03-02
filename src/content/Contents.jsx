@@ -152,32 +152,42 @@ const getLogo = (id) => {
     return unchangeable.skillsLogos[id] || unchangeable.skillsLogos["default"];
 };
 
-export const popUpMenuecontent = {
 
-    nav: [
-        {
-            link: "#home",
-            icon: TbSmartHome,
-        },
-        {
-            link: "#skills",
-            icon: BiUser,
-        },
-        {
-            link: "#services",
-            icon: RiServiceLine,
-        },
-        {
-            link: "#projects",
-            icon: RiProjectorLine,
-        },
-        {
-            link: "#contact",
-            icon: MdOutlinePermContactCalendar,
-        },
-    ],
+export const useServices = () => {
+    const { t } = useTranslation("services");
 
-}
+    return {
+        title: t("title"),
+        subtitle: t("subtitle"),
+        services_content: [
+            {
+                id: "001",
+                name: t("services_content.0.name"),
+                description: t("services_content.0.description"),
+                services: t("services_content.0.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("001"),
+            },
+            {
+                id: "002",
+                name: t("services_content.1.name"),
+                description: t("services_content.1.description"),
+                services: t("services_content.1.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("002"),
+            },
+            {
+                id: "003",
+                name: t("services_content.2.name"),
+                description: t("services_content.2.description"),
+                services: t("services_content.2.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("003"),
+            }
+        ]
+    };
+};
+
+const getServicesIcon = (id) => {
+    return unchangeable.servicesIcon[id] || unchangeable.servicesIcon["default"];
+};
 
 export const contact = {
     title: "Contact Me",
@@ -213,6 +223,32 @@ export const contact = {
 };
 
 
+export const popUpMenuecontent = {
+
+    nav: [
+        {
+            link: "#home",
+            icon: TbSmartHome,
+        },
+        {
+            link: "#skills",
+            icon: BiUser,
+        },
+        {
+            link: "#services",
+            icon: RiServiceLine,
+        },
+        {
+            link: "#projects",
+            icon: RiProjectorLine,
+        },
+        {
+            link: "#contact",
+            icon: MdOutlinePermContactCalendar,
+        },
+    ],
+
+};
 
 
 export const themes = [
@@ -222,7 +258,7 @@ export const themes = [
     },
     {
         name: "youtube",
-        color: "rgb(255, 2, 0)",
+        color: "rgb(235, 35, 0)",
     },
     {
         name: "twitch",

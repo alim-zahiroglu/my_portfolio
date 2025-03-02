@@ -37,7 +37,7 @@ const Contact = () => {
         <h2 className="title text-4xl ext-theme_bg_copy" data-aos="fade-down">
           {contact.title}
         </h2>
-        <h4 className="font-paprika text-2xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
+        <h4 className="font-paprika text-2xl text-secondary/80 pt-2" data-aos="fade-down">
           {contact.subtitle}
         </h4>
         <br />
@@ -86,7 +86,7 @@ const Contact = () => {
                 data-aos-delay={i * 430}
                 className="flex items-center gap-2"
               >
-                <Icon icon={content.icon} width="26" height="26" className="mr-1" />
+                <Icon icon={content.icon} width="26" height="26" className="mr-1 text-secondary/80" />
                 <a className="text-xl" href={content.link} target="_blank">
                   {content.text}
                 </a>

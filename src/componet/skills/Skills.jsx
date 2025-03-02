@@ -12,7 +12,7 @@ const Skills = () => {
                     <h1 className="text-4xl font-bold text-theme_bg_copy" data-aos="fade-down">
                         {title}
                     </h1>
-                    <h1 className="font-paprika text-2xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
+                    <h1 className="font-paprika text-2xl text-secondary/80 pt-2" data-aos="fade-down">
                         {subtitle}
                     </h1>
                     <br />
