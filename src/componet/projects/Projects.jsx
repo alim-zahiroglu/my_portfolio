@@ -13,7 +13,7 @@ function Projects() {
             <div className='container mt-6 justify-center items-center'>
 
                 <div className='mb-4 items-center flex flex-col'>
-                    <h1 data-aos="fade-down" data-aos-delay="200" className="text-theme_fg_copy sm:text-4xl text-2xl px-5 sm:px-0 sm:text-start pt-[60px]  aos-init aos-animate">{title}</h1>
+                    <h1 data-aos="fade-down" data-aos-delay="200" className="text-theme_fg_copy text-4xl px-5 sm:px-0 sm:text-start pt-[60px] font-bold aos-init aos-animate">{title}</h1>
 
                     <h1
                         data-aos="fade-down"

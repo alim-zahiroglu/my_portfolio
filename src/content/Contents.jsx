@@ -1,9 +1,5 @@
 
 // import icons from react-icons
-import { TbSmartHome } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
-import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
 import unchangeable from '../localization/locales/en/unchangeable.json';
 
 import { useTranslation } from "react-i18next";
@@ -227,24 +223,24 @@ export const popUpMenuecontent = {
 
     nav: [
         {
-            link: "#home",
-            icon: TbSmartHome,
-        },
-        {
-            link: "#skills",
-            icon: BiUser,
-        },
-        {
-            link: "#services",
-            icon: RiServiceLine,
+            link: "#aboutme",
+            icon: "mdi:account",
         },
         {
             link: "#projects",
-            icon: RiProjectorLine,
+            icon: "mdi:folder-open",
+        },
+        {
+            link: "#skills",
+            icon: "mdi:lightbulb-on",
+        },
+        {
+            link: "#services",
+            icon: "mdi:cog",
         },
         {
             link: "#contact",
-            icon: MdOutlinePermContactCalendar,
+            icon: "mdi:contact-mail",
         },
     ],
 
