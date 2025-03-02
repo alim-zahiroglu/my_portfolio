@@ -77,7 +77,7 @@
 
 .youtube-light {
 
-    --primary: 255, 2, 0;
+    --primary: 235, 35, 0;
     --primary-content: 255, 255, 255;
     --primary-dark: 204, 2, 0;
     --primary-light: 255, 53, 51;
@@ -108,7 +108,7 @@
 
 .youtube-dark {
 
-    --primary: 255, 2, 0;
+    --primary: 235, 35, 0;
     --primary-content: 255, 255, 255;
     --primary-dark: 204, 2, 0;
     --primary-light: 255, 53, 51;

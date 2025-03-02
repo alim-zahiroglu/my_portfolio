@@ -9,6 +9,7 @@ import SocialMediaIcons from './socialMediaIcons/SocialMediaIcons'
 import ThemeIcons from './themes/ThemeIcons'
 import Contact from './contact/Contact'
 import Footer from './footer'
+import Services from './services/services'
 
 function Wrapper() {
 
@@ -20,6 +21,7 @@ function Wrapper() {
             <Hero />
             <Projects />
             <Skills />
+            <Services />
             <Contact />
             <Footer />
             <PopupMenue />

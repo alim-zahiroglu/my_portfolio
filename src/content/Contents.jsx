@@ -12,11 +12,6 @@ import developer from '../assets/images/hero/developer.svg';
 import developer_dark from '../assets/images/hero/developer-dark.svg';
 
 
-import { GrMail } from "react-icons/gr";
-import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
-import { u } from "framer-motion/client";
-
 export const useHeaderMenu = () => {
 
     const { t } = useTranslation('header');
@@ -135,26 +130,26 @@ export const useSkills = () => {
                 name: t('skills_content.0.name'),
                 description: t('skills_content.0.description'),
                 skills: t('skills_content.0.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.0.name')),
+                logo: getLogo(t('skills_content.0.id')),
             },
             {
                 name: t('skills_content.1.name'),
                 description: t('skills_content.1.description'),
                 skills: t('skills_content.1.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.1.name')),
+                logo: getLogo(t('skills_content.1.id')),
             },
             {
                 name: t('skills_content.2.name'),
                 description: t('skills_content.2.description'),
                 skills: t('skills_content.2.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.2.name')),
+                logo: getLogo(t('skills_content.2.id')),
             }
         ]
     };
 };
 
-const getLogo = (skills_name) => {
-    return unchangeable.skillsLogos[skills_name] || unchangeable.skillsLogos["default"];
+const getLogo = (id) => {
+    return unchangeable.skillsLogos[id] || unchangeable.skillsLogos["default"];
 };
 
 export const popUpMenuecontent = {

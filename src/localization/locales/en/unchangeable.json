@@ -21,9 +21,9 @@
         "default": "https://uydev.net"
     },
     "skillsLogos": {
-        "FrontEnd": "/src/assets/images/skills/react.png",
-        "UI & Graphic Design": "/src/assets/images/skills/ps.png",
-        "BackEnd": "/src/assets/images/skills/backend.png",
+        "002": "/src/assets/images/skills/react.png",
+        "003": "/src/assets/images/skills/ps.png",
+        "001": "/src/assets/images/skills/backend.png",
         "default": "/src/assets/images/skills/backend.png"
     },
     "socialMediaLinks": {

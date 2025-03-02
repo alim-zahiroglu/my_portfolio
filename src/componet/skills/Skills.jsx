@@ -8,14 +8,16 @@ const Skills = () => {
         <div className="min-h-fit bg-theme_fg" id="skills">
             {/* content */}
             <div className="md:container px-5  py-14 mt-[80px]">
-                <h1 className="title text-3xl ext-theme_bg_copy" data-aos="fade-down">
-                    {title}
-                </h1>
-                <h1 className="font-paprika text-3xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
-                    {subtitle}
-                </h1>
-                <br />
-                <div className="flex flex-wrap gap-4 justify-center">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-theme_bg_copy" data-aos="fade-down">
+                        {title}
+                    </h1>
+                    <h1 className="font-paprika text-2xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
+                        {subtitle}
+                    </h1>
+                    <br />
+                </div>
+                <div className="flex flex-wrap gap-10 justify-center">
                     {skills_content.map((skill, i) => (
                         <div
                             key={i}
@@ -23,7 +25,7 @@ const Skills = () => {
                             data-aos-delay={i * 400}
                             className="sm:cursor-pointer bg-theme_bg
                        relative group w-full flex flex-col
-                       p-5 max-w-sm rounded-md border-2 border-theme_border"
+                       p-5 max-w-sm rounded-md border border-theme_border shadow-lg hover:shadow-xl"
                         >
                             <div className="flex items-center gap-5">
                                 <img

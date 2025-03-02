@@ -31,13 +31,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-theme_bg" id="contact">
+    <section className="bg-theme_fg" id="contact">
       <Toaster />
       <div className="md:container px-5 py-14">
-        <h2 className="title text-3xl ext-theme_bg_copy" data-aos="fade-down">
+        <h2 className="title text-4xl ext-theme_bg_copy" data-aos="fade-down">
           {contact.title}
         </h2>
-        <h4 className="font-paprika text-3xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
+        <h4 className="font-paprika text-2xl text-theme_bg_copy/60 pt-2" data-aos="fade-down">
           {contact.subtitle}
         </h4>
         <br />

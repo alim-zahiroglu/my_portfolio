@@ -3,6 +3,7 @@
     "subtitle": "MY TOP SKILLS",
     "skills_content": [
         {
+            "id": "001",
             "name": "BackEnd",
             "description": "BackEnd development with Java Spring Boot and Python FastAPI",
             "skills": [
@@ -15,10 +16,12 @@
                 "Kafka",
                 "JWT",
                 "Keycloak",
+                "Spring AOP",
+                "Spring Data JPA",
+                "Spring AI",
                 "PostgreSQL",
                 "MySQL",
                 "Docker",
-                "Git",
                 "Junit",
                 "Mockito",
                 "Postman",
@@ -32,6 +35,7 @@
             ]
         },
         {
+            "id": "002",
             "name": "FrontEnd",
             "description": "FrontEnd development with React and Next.js",
             "skills": [
@@ -49,6 +53,7 @@
         {
             "name": "UI & Graphic Design",
             "description": "UI & Graphic Design with Adobe apps",
+            "id": "003",
             "skills": [
                 "Adobe XD",
                 "Adobe Photoshop",
