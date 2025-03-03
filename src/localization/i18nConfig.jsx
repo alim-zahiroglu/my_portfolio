@@ -9,6 +9,7 @@ import enprojects from './locales/en/projects.json'
 import enprojectsButtonText from './locales/en/projectsButtonText.json'
 import enskills from './locales/en/skills.json'
 import enservices from './locales/en/services.json'
+import enContact from './locales/en/contacts.json'
 
 import trHeader from './locales/tr/header.json'
 import trHero from './locales/tr/hero.json'
@@ -16,6 +17,7 @@ import trprojects from './locales/tr/projects.json'
 import trprojectsButtonText from './locales/tr/projectsButtonText.json'
 import trskills from './locales/tr/skills.json'
 import trservices from './locales/tr/services.json'
+import trContact from './locales/tr/contacts.json'
 
 const resources = {
     en: {
@@ -25,6 +27,7 @@ const resources = {
         projectsButtonText: enprojectsButtonText,
         skills: enskills,
         services: enservices,
+        contact: enContact
 
 
     },
@@ -35,6 +38,7 @@ const resources = {
         projectsButtonText: trprojectsButtonText,
         skills: trskills,
         services: trservices,
+        contact: trContact
     },
 };
 

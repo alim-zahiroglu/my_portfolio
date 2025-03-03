@@ -10,7 +10,7 @@
                 "REST API Development",
                 "Microservices Architecture",
                 "Swagger API Documentation",
-                "Authentication & Authorization (JWT, OAuth, Keycloak)",
+                "Authentication & Authorization (JWT, OAuth2, Keycloak)",
                 "Database Design & Optimization (PostgreSQL, MySQL)",
                 "Cloud & DevOps (AWS, Docker, CI/CD, Nginx)"
             ]

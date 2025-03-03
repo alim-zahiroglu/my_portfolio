@@ -11,7 +11,7 @@ export default function Services() {
                 <h1 className="text-4xl font-bold text-center text-theme_bg_copy" data-aos="fade-down">
                     {services.title}
                 </h1>
-                <h1 className="text-2xl font-light text-center text-secondary/80 pt-2" data-aos="fade-down">
+                <h1 className="font-paprika text-2xl font-light text-center text-secondary/80 pt-2" data-aos="fade-down">
                     {services.subtitle}
                 </h1>
                 <br />

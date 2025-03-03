@@ -1,41 +1,41 @@
 {
-    "title": "Services",
-    "subtitle": "WHAT I OFFER",
+    "title": "Hizmetler",
+    "subtitle": "Neler Sunuyorum",
     "services_content": [
         {
             "id": "001",
-            "name": "Backend Development",
-            "description": "Building scalable and secure backend solutions with Java Spring Boot and Python FastAPI.",
+            "name": "Backend Geliştirme",
+            "description": "Java Spring Boot ve Python FastAPI ile ölçeklenebilir ve güvenli backend çözümleri oluşturma.",
             "services": [
-                "REST API Development",
-                "Microservices Architecture",
-                "Swagger API Documentation",
-                "Authentication & Authorization (JWT, OAuth, Keycloak)",
-                "Database Design & Optimization (PostgreSQL, MySQL)",
-                "Cloud & DevOps (AWS, Docker, CI/CD, Nginx)"
+                "REST API Geliştirme",
+                "Mikroservis Mimarisi",
+                "Swagger API Dokümantasyonu",
+                "Kimlik Doğrulama ve Yetkilendirme (JWT, OAuth2, Keycloak)",
+                "Veritabanı Tasarımı ve Optimizasyonu (PostgreSQL, MySQL)",
+                "Bulut ve DevOps (AWS, Docker, CI/CD, Nginx)"
             ]
         },
         {
             "id": "002",
-            "name": "Frontend Development",
-            "description": "Creating interactive and responsive web applications with modern frontend technologies.",
+            "name": "Frontend Geliştirme",
+            "description": "Modern frontend teknolojileriyle etkileşimli ve duyarlı web uygulamaları oluşturma.",
             "services": [
-                "React & Next.js Development",
-                "State Management (Redux, Context API)",
-                "Responsive UI with Bootstrap & Tailwind",
-                "API Integration with Axios & Fetch",
-                "Performance Optimization"
+                "React & Next.js Geliştirme",
+                "Durum Yönetimi (Redux, Context API)",
+                "Duyarlı UI Tasarımı (Bootstrap & Tailwind)",
+                "API Entegrasyonu (Axios & Fetch)",
+                "Performans Optimizasyonu"
             ]
         },
         {
             "id": "003",
-            "name": "UI & Graphic Design",
-            "description": "Enhancing user experience with visually appealing UI designs and graphics.",
+            "name": "UI & Grafik Tasarım",
+            "description": "Kullanıcı deneyimini geliştirmek için görsel olarak etkileyici UI tasarımları ve grafikler.",
             "services": [
-                "Website UI/UX Design",
-                "Graphic Design with Adobe Photoshop & Illustrator",
-                "Motion Graphics & Video Editing",
-                "Prototyping with Adobe XD & Figma"
+                "Web Sitesi UI/UX Tasarımı",
+                "Adobe Photoshop & Illustrator ile Grafik Tasarım",
+                "Hareketli Grafikler ve Video Düzenleme",
+                "Adobe XD & Figma ile Prototipleme"
             ]
         }
     ]

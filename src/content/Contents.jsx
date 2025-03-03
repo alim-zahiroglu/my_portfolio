@@ -14,7 +14,7 @@ export const useHeaderMenu = () => {
 
     return {
         logoLetter: {
-            logo: t('logoLetter', { logoName: 'Alim' }),
+            logo: t('logoLetter', { logoName: unchangeable.logoName }),
             link: '#aboutme',
         },
 
@@ -53,7 +53,7 @@ export const useHeroContent = (themeMode) => {
 
     return {
         textContent: {
-            heading: t('heading', { name: 'Alim Zahiroglu' }),
+            heading: t('heading', { name: unchangeable.heroHeader }),
             subheading: t('subheading'),
             buttonText: t('buttonText'),
         },
@@ -185,37 +185,50 @@ const getServicesIcon = (id) => {
     return unchangeable.servicesIcon[id] || unchangeable.servicesIcon["default"];
 };
 
-export const contact = {
-    title: "Contact Me",
-    subtitle: "GET IN TOUCH",
-    social_media: [
-        {
-            text: unchangeable.contacts.email,
-            icon: "ic:round-email",
-            link: "mailto:" + unchangeable.contacts.email,
-        },
-        {
-            text: unchangeable.contacts.phone,
-            icon: "ri:whatsapp-fill",
-            link: "https://wa.me/" + unchangeable.contacts.wahtsapp,
-        },
-        {
-            text: "LinkedIn",
-            icon: "ri:linkedin-fill",
-            link: unchangeable.socialMediaLinks.linkedin,
-        },
-        {
-            text: "GitHub",
-            icon: "uil:github",
-            link: unchangeable.socialMediaLinks.github,
-        },
-        {
-            text: "YouTube",
-            icon: "uil:youtube",
-            link: unchangeable.socialMediaLinks.youtube,
-        },
+export const useContact = () => {
+    const { t } = useTranslation("contact");
 
-    ],
+    return {
+        title: t("title"),
+        subtitle: t("subtitle"),
+        namefiled: t("namefiled"),
+        emailfiled: t("emailfiled"),
+        messagefiled: t("messagefiled"),
+        sendbutton: t("sendbutton"),
+
+        social_media: [
+            {
+                text: unchangeable.contacts.email,
+                icon: unchangeable.contacts.emailIcom, // Using correct icon reference
+                link: "mailto:" + unchangeable.contacts.email,
+            },
+            {
+                text: unchangeable.contacts.phone,
+                icon: unchangeable.contacts.phoneIcom, // Using correct icon reference
+                link: "https://wa.me/" + unchangeable.contacts.wahtsapp,
+            },
+            ...unchangeable.socialMediaLinks.map(social => ({
+                text: social.text,
+                icon: social.icon,
+                link: social.link
+            }))
+        ],
+    };
+};
+
+export const popupSocialMedia = [
+    ...unchangeable.socialMediaLinks.map(social => ({
+        icon: unchangeable.popupIcons[social.text] || unchangeable.popupIcons["default"],
+        link: social.link
+    })),
+    {
+        icon: "mdi:email-outline",
+        link: "mailto:" + unchangeable.contacts.email,
+    }
+];
+
+const getSocialMediaIcon = (text) => {
+    return unchangeable.popupIcons[text] || unchangeable.popupIcons["default"];
 };
 
 
@@ -284,10 +297,7 @@ export const themes = [
 
 
 export const languages = [
-    "en",
-    "tr",
-    // "uy",
-    // "ar"
+    ...unchangeable.languages
 ]
 
 
