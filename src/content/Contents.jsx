@@ -1,18 +1,12 @@
 
 // import icons from react-icons
-import { TbSmartHome } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
-import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
 import unchangeable from '../localization/locales/en/unchangeable.json';
-import backend from "../assets/images/skills/backend.png";
-import ps from "../assets/images/skills/ps.png";
-import reactjs from "../assets/images/skills/react.png";
 
 import { useTranslation } from "react-i18next";
 
 import developer from '../assets/images/hero/developer.svg';
 import developer_dark from '../assets/images/hero/developer-dark.svg';
+
 
 export const useHeaderMenu = () => {
 
@@ -20,7 +14,7 @@ export const useHeaderMenu = () => {
 
     return {
         logoLetter: {
-            logo: t('logoLetter', { logoName: 'Alim' }),
+            logo: t('logoLetter', { logoName: unchangeable.logoName }),
             link: '#aboutme',
         },
 
@@ -59,7 +53,7 @@ export const useHeroContent = (themeMode) => {
 
     return {
         textContent: {
-            heading: t('heading', { name: 'Alim Zahiroglu' }),
+            heading: t('heading', { name: unchangeable.heroHeader }),
             subheading: t('subheading'),
             buttonText: t('buttonText'),
         },
@@ -132,56 +126,138 @@ export const useSkills = () => {
                 name: t('skills_content.0.name'),
                 description: t('skills_content.0.description'),
                 skills: t('skills_content.0.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.0.name')),
+                logo: getLogo(t('skills_content.0.id')),
             },
             {
                 name: t('skills_content.1.name'),
                 description: t('skills_content.1.description'),
                 skills: t('skills_content.1.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.1.name')),
+                logo: getLogo(t('skills_content.1.id')),
             },
             {
                 name: t('skills_content.2.name'),
                 description: t('skills_content.2.description'),
                 skills: t('skills_content.2.skills', { returnObjects: true }),
-                logo: getLogo(t('skills_content.2.name')),
+                logo: getLogo(t('skills_content.2.id')),
             }
         ]
     };
 };
 
-const getLogo = (skills_name) => {
-    return unchangeable.skillsLogos[skills_name] || unchangeable.skillsLogos["default"];
+const getLogo = (id) => {
+    return unchangeable.skillsLogos[id] || unchangeable.skillsLogos["default"];
 };
+
+
+export const useServices = () => {
+    const { t } = useTranslation("services");
+
+    return {
+        title: t("title"),
+        subtitle: t("subtitle"),
+        services_content: [
+            {
+                id: "001",
+                name: t("services_content.0.name"),
+                description: t("services_content.0.description"),
+                services: t("services_content.0.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("001"),
+            },
+            {
+                id: "002",
+                name: t("services_content.1.name"),
+                description: t("services_content.1.description"),
+                services: t("services_content.1.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("002"),
+            },
+            {
+                id: "003",
+                name: t("services_content.2.name"),
+                description: t("services_content.2.description"),
+                services: t("services_content.2.services", { returnObjects: true }) || [],
+                icon: getServicesIcon("003"),
+            }
+        ]
+    };
+};
+
+const getServicesIcon = (id) => {
+    return unchangeable.servicesIcon[id] || unchangeable.servicesIcon["default"];
+};
+
+export const useContact = () => {
+    const { t } = useTranslation("contact");
+
+    return {
+        title: t("title"),
+        subtitle: t("subtitle"),
+        namefiled: t("namefiled"),
+        emailfiled: t("emailfiled"),
+        messagefiled: t("messagefiled"),
+        sendbutton: t("sendbutton"),
+
+        social_media: [
+            {
+                text: unchangeable.contacts.email,
+                icon: unchangeable.contacts.emailIcom, // Using correct icon reference
+                link: "mailto:" + unchangeable.contacts.email,
+            },
+            {
+                text: unchangeable.contacts.phone,
+                icon: unchangeable.contacts.phoneIcom, // Using correct icon reference
+                link: "https://wa.me/" + unchangeable.contacts.wahtsapp,
+            },
+            ...unchangeable.socialMediaLinks.map(social => ({
+                text: social.text,
+                icon: social.icon,
+                link: social.link
+            }))
+        ],
+    };
+};
+
+export const popupSocialMedia = [
+    ...unchangeable.socialMediaLinks.map(social => ({
+        icon: unchangeable.popupIcons[social.text] || unchangeable.popupIcons["default"],
+        link: social.link
+    })),
+    {
+        icon: "mdi:email-outline",
+        link: "mailto:" + unchangeable.contacts.email,
+    }
+];
+
+const getSocialMediaIcon = (text) => {
+    return unchangeable.popupIcons[text] || unchangeable.popupIcons["default"];
+};
+
 
 export const popUpMenuecontent = {
 
     nav: [
         {
-            link: "#home",
-            icon: TbSmartHome,
-        },
-        {
-            link: "#skills",
-            icon: BiUser,
-        },
-        {
-            link: "#services",
-            icon: RiServiceLine,
+            link: "#aboutme",
+            icon: "mdi:account",
         },
         {
             link: "#projects",
-            icon: RiProjectorLine,
+            icon: "mdi:folder-open",
+        },
+        {
+            link: "#skills",
+            icon: "mdi:lightbulb-on",
+        },
+        {
+            link: "#services",
+            icon: "mdi:cog",
         },
         {
             link: "#contact",
-            icon: MdOutlinePermContactCalendar,
+            icon: "mdi:contact-mail",
         },
     ],
 
-}
-
-
+};
 
 
 export const themes = [
@@ -191,7 +267,7 @@ export const themes = [
     },
     {
         name: "youtube",
-        color: "rgb(255, 2, 0)",
+        color: "rgb(235, 35, 0)",
     },
     {
         name: "twitch",
@@ -221,10 +297,7 @@ export const themes = [
 
 
 export const languages = [
-    "en",
-    "tr",
-    // "uy",
-    // "ar"
+    ...unchangeable.languages
 ]
 
 

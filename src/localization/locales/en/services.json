@@ -1,0 +1,42 @@
+{
+    "title": "Services",
+    "subtitle": "WHAT I OFFER",
+    "services_content": [
+        {
+            "id": "001",
+            "name": "Backend Development",
+            "description": "Building scalable and secure backend solutions with Java Spring Boot and Python FastAPI.",
+            "services": [
+                "REST API Development",
+                "Microservices Architecture",
+                "Swagger API Documentation",
+                "Authentication & Authorization (JWT, OAuth2, Keycloak)",
+                "Database Design & Optimization (PostgreSQL, MySQL)",
+                "Cloud & DevOps (AWS, Docker, CI/CD, Nginx)"
+            ]
+        },
+        {
+            "id": "002",
+            "name": "Frontend Development",
+            "description": "Creating interactive and responsive web applications with modern frontend technologies.",
+            "services": [
+                "React & Next.js Development",
+                "State Management (Redux, Context API)",
+                "Responsive UI with Bootstrap & Tailwind",
+                "API Integration with Axios & Fetch",
+                "Performance Optimization"
+            ]
+        },
+        {
+            "id": "003",
+            "name": "UI & Graphic Design",
+            "description": "Enhancing user experience with visually appealing UI designs and graphics.",
+            "services": [
+                "Website UI/UX Design",
+                "Graphic Design with Adobe Photoshop & Illustrator",
+                "Motion Graphics & Video Editing",
+                "Prototyping with Adobe XD & Figma"
+            ]
+        }
+    ]
+}

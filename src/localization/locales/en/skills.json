@@ -3,26 +3,66 @@
     "subtitle": "MY TOP SKILLS",
     "skills_content": [
         {
+            "id": "001",
             "name": "BackEnd",
-            "description": "BackEnd development with Java Spring Boot",
+            "description": "BackEnd development with Java Spring Boot and Python FastAPI",
             "skills": [
                 "Java",
                 "Spring-boot",
                 "Hibernate",
-                "SQL",
                 "Restful API",
-                "Kafka"
+                "spring security",
+                "Microservices",
+                "Kafka",
+                "JWT",
+                "Keycloak",
+                "Spring AOP",
+                "Spring Data JPA",
+                "Spring AI",
+                "PostgreSQL",
+                "MySQL",
+                "Docker",
+                "Junit",
+                "Mockito",
+                "Postman",
+                "Swagger",
+                "DevOps",
+                "Nginx",
+                "CI/CD",
+                "AWS",
+                "python",
+                "FastAPI"
             ]
         },
         {
+            "id": "002",
             "name": "FrontEnd",
-            "description": "FrontEnd development with React",
-            "skills": []
+            "description": "FrontEnd development with React and Next.js",
+            "skills": [
+                "React",
+                "Next.js",
+                "Redux",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript",
+                "Bootstrap",
+                "Axios"
+            ]
         },
         {
             "name": "UI & Graphic Design",
             "description": "UI & Graphic Design with Adobe apps",
-            "skills": []
+            "id": "003",
+            "skills": [
+                "Adobe XD",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Adobe After Effects",
+                "Adobe Premiere Pro",
+                "Adobe Indesign",
+                "Corel Draw"
+            ]
         }
     ]
 }

@@ -3,26 +3,66 @@
     "subtitle": "EN İYİ BECERİLERİM",
     "skills_content": [
         {
+            "id": "001",
             "name": "BackEnd",
             "description": "Java Spring Boot ile BackEnd geliştirme",
             "skills": [
                 "Java",
                 "Spring-boot",
                 "Hibernate",
-                "SQL",
                 "Restful API",
-                "Kafka"
+                "spring security",
+                "Microservices",
+                "Kafka",
+                "JWT",
+                "Keycloak",
+                "Spring AOP",
+                "Spring Data JPA",
+                "Spring AI",
+                "PostgreSQL",
+                "MySQL",
+                "Docker",
+                "Junit",
+                "Mockito",
+                "Postman",
+                "Swagger",
+                "DevOps",
+                "Nginx",
+                "CI/CD",
+                "AWS",
+                "python",
+                "FastAPI"
             ]
         },
         {
+            "id": "002",
             "name": "FrontEnd",
             "description": "React ile FrontEnd geliştirme",
-            "skills": []
+            "skills": [
+                "React",
+                "Next.js",
+                "Redux",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript",
+                "Bootstrap",
+                "Axios"
+            ]
         },
         {
             "name": "UI ve Grafik Tasarım",
             "description": "Adobe uygulamaları ile UI ve Grafik Tasarım",
-            "skills": []
+            "id": "003",
+            "skills": [
+                "Adobe XD",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Adobe After Effects",
+                "Adobe Premiere Pro",
+                "Adobe Indesign",
+                "Corel Draw"
+            ]
         }
     ]
 }

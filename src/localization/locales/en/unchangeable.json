@@ -1,4 +1,6 @@
 {
+    "logoName": "Alim",
+    "heroHeader": "Alim Zahiroglu",
     "projectsImages": {
         "Ticketing App": "/src/assets/images/projects/ui-project-1.jpg",
         "Accounting App": "/src/assets/images/projects/ui-project-2.jpg",
@@ -21,9 +23,49 @@
         "default": "https://uydev.net"
     },
     "skillsLogos": {
-        "FrontEnd": "/src/assets/images/skills/react.png",
-        "UI & Graphic Design": "/src/assets/images/skills/ps.png",
-        "BackEnd": "/src/assets/images/skills/backend.png",
+        "002": "/src/assets/images/skills/react.png",
+        "003": "/src/assets/images/skills/ps.png",
+        "001": "/src/assets/images/skills/backend.png",
         "default": "/src/assets/images/skills/backend.png"
-    }
+    },
+    "socialMediaLinks": [
+        {
+            "text": "Github",
+            "icon": "uil:github",
+            "link": "https://github.com/alim-zahiroglu"
+        },
+        {
+            "text": "LinkedIn",
+            "icon": "ri:linkedin-fill",
+            "link": "https://www.linkedin.com/in/alim-zahiroglu"
+        },
+        {
+            "text": "YouTube",
+            "icon": "uil:youtube",
+            "link": "https://www.youtube.com/@alim-zahiroglu"
+        }
+    ],
+    "popupIcons": {
+        "Github": "proicons:github",
+        "LinkedIn": "basil:linkedin-outline",
+        "YouTube": "basil:youtube-outline",
+        "default": "basil:youtube-outline"
+    },
+    "contacts": {
+        "phone": "+90 505 957 92 77",
+        "wahtsapp": "+905059579277",
+        "email": "alim@uydev.net",
+        "emailIcom": "ic:round-email",
+        "phoneIcom": "ri:whatsapp-fill"
+    },
+    "servicesIcon": {
+        "001": "mingcute:code-fill",
+        "002": "fa-solid:laptop-code",
+        "003": "fa6-solid:paintbrush",
+        "default": "solar:code-square-broken"
+    },
+    "languages": [
+        "en",
+        "tr"
+    ]
 }
