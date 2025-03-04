@@ -1,5 +1,4 @@
 
-// import icons from react-icons
 import unchangeable from '../localization/locales/en/unchangeable.json';
 
 import { useTranslation } from "react-i18next";
@@ -195,17 +194,21 @@ export const useContact = () => {
         emailfiled: t("emailfiled"),
         messagefiled: t("messagefiled"),
         sendbutton: t("sendbutton"),
+        nameError: t("nameError"),
+        emailError: t("emailError"),
+        messageError: t("messageError"),
+        successMessage: t("successMessage"),
 
         social_media: [
             {
                 text: unchangeable.contacts.email,
-                icon: unchangeable.contacts.emailIcom, // Using correct icon reference
+                icon: unchangeable.contacts.emailIcom,
                 link: "mailto:" + unchangeable.contacts.email,
             },
             {
                 text: unchangeable.contacts.phone,
-                icon: unchangeable.contacts.phoneIcom, // Using correct icon reference
-                link: "https://wa.me/" + unchangeable.contacts.wahtsapp,
+                icon: unchangeable.contacts.phoneIcom,
+                link: `https://wa.me/${unchangeable.contacts.wahtsapp}?text=${encodeURIComponent(t("whatsappMessage"))}`,
             },
             ...unchangeable.socialMediaLinks.map(social => ({
                 text: social.text,

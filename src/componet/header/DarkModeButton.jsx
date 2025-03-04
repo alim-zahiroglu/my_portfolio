@@ -1,4 +1,3 @@
-import { FaMoon } from "react-icons/fa";
 import { Icon } from '@iconify/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeThemeMode, toggleThemeMode } from "../../redux/slice/ThemeSlice";
