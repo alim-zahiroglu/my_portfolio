@@ -5,5 +5,9 @@
     "emailfiled": "Email",
     "messagefiled": "Message",
     "sendbutton": "Submit",
-    "whatsappMessage": "Hello Alim, I want to get in touch with you"
+    "whatsappMessage": "Hello Alim, I want to get in touch with you",
+    "nameError": "Name must be at least 2 characters long",
+    "emailError": "Please enter a valid email address",
+    "messageError": "Message cannot be blank",
+    "successMessage": "Message sent successfully"
 }

@@ -194,6 +194,9 @@ export const useContact = () => {
         emailfiled: t("emailfiled"),
         messagefiled: t("messagefiled"),
         sendbutton: t("sendbutton"),
+        nameError: t("nameError"),
+        emailError: t("emailError"),
+        messageError: t("messageError"),
 
         social_media: [
             {
