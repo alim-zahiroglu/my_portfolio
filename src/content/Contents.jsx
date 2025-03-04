@@ -197,6 +197,7 @@ export const useContact = () => {
         nameError: t("nameError"),
         emailError: t("emailError"),
         messageError: t("messageError"),
+        successMessage: t("successMessage"),
 
         social_media: [
             {
