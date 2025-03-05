@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import developer from '../assets/images/hero/developer.svg';
 import developer_dark from '../assets/images/hero/developer-dark.svg';
+import { send } from 'vite';
 
 
 export const useHeaderMenu = () => {
@@ -198,6 +199,7 @@ export const useContact = () => {
         emailError: t("emailError"),
         messageError: t("messageError"),
         successMessage: t("successMessage"),
+        sendMessageError: t("sendMessageError"),
 
         social_media: [
             {

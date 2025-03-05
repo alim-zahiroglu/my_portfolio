@@ -1,10 +1,19 @@
 
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react";
 import { useContact } from "../../content/Contents";
+import { sendMessage } from "../../api/massageSend";
+import { useDispatch, useSelector } from "react-redux";
 
 const Contact = () => {
+
+  const isMessageSent = useSelector((store) => store.messageSender.isMessageSent);
+  const isError = useSelector((store) => store.messageSender.isError);
+  const isLoading = useSelector((store) => store.messageSender.isLoading);
+
+  const dispatch = useDispatch();
+
+
   const {
     title,
     subtitle,
@@ -14,7 +23,7 @@ const Contact = () => {
     nameError,
     emailError,
     messageError,
-    successMessage,
+    sendMessageError,
     social_media,
     sendbutton,
   } = useContact();
@@ -30,7 +39,7 @@ const Contact = () => {
   const inputsCss =
     "text-xl border p-3 rounded-md bg-theme_fg focus:outline-none focus:border-primary w-full";
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     const name = form.current.from_name.value.trim();
@@ -57,43 +66,27 @@ const Contact = () => {
 
     setErrors({ name: "", email: "", message: "" });
 
-    const serviceID = "service_ocse6uu";
-    const templateID = "template_t8ge4sq";
-    const publicKey = "feNAFHh_unmTCAfe-";
+    const requestData = {
+      name: name,
+      from: email,
+      subject: "New Message From Your Portfolio",
+      body: message,
 
-    const formData = new FormData(e.target);
+    };
 
-    emailjs
-      .sendForm(serviceID, templateID, e.target, publicKey)
-      .then(() => {
-        console.log("Message sent to admin!");
+    await dispatch(sendMessage(requestData)).unwrap();
 
-        // Clear form before showing success message
-        form.current.reset();
+    // Clear form before showing success message
+    form.current.reset();
 
-        // Show success message
-        setShowSuccess(true);
+    // Show success message
+    setShowSuccess(true);
 
-        // Auto-hide success message after 2 seconds
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 2000);
+    // Auto-hide success message after 2 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 2000);
 
-        emailjs
-          .send(
-            serviceID,
-            "template_olxy2b8",
-            {
-              user_email: formData.get("user_email"),
-              from_name: formData.get("from_name"),
-              message: formData.get("message"),
-            },
-            publicKey
-          )
-          .then(() => console.log("Auto-reply sent!"))
-          .catch((error) => console.log("Auto-reply failed:", error));
-      })
-      .catch((error) => console.log("Message sending failed:", error));
   };
 
   return (
@@ -123,6 +116,11 @@ const Contact = () => {
                     : errors.email
                       ? errors.email
                       : errors.message}
+                </p>
+              )}
+              {isError && (
+                <p className="text-red-500 -mb-3">
+                  {sendMessageError}
                 </p>
               )}
             </div>
@@ -202,6 +200,7 @@ const Contact = () => {
 
 // Success Alert Component (Message Above Form)
 const SuccessAlert = () => {
+  const { successMessage } = useContact();
   return (
     <div
       className="bg-secondary text-secondary_content border border-theme_border shadow-lg px-5 py-2 rounded-md flex items-center space-x-4 z-50 transition-all duration-500 ease-out opacity-100 scale-100"

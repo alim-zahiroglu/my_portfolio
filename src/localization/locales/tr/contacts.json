@@ -9,5 +9,6 @@
     "nameError": "İsim en az 2 karakter uzunluğunda olmalıdır",
     "emailError": "Lütfen geçerli bir e-posta adresi girin",
     "messageError": "Mesaj boş olamaz",
-    "successMessage": "Mesajınız başarıyla gönderildi"
+    "successMessage": "Mesajınız başarıyla gönderildi",
+    "sendMessageError": "Mesaj gönderilemedi, daha sonra tekrar deneyin"
 }
