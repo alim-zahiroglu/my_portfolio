@@ -3,9 +3,6 @@ import unchangeable from '../localization/locales/en/unchangeable.json';
 
 import { useTranslation } from "react-i18next";
 
-import developer from '../assets/images/hero/developer.svg';
-import developer_dark from '../assets/images/hero/developer-dark.svg';
-
 
 export const useHeaderMenu = () => {
 
@@ -56,7 +53,7 @@ export const useHeroContent = (themeMode) => {
             subheading: t('subheading'),
             buttonText: t('buttonText'),
         },
-        image: themeMode === 'dark' ? developer : developer_dark,
+        image: themeMode === 'dark' ? unchangeable.heroImages.developer : unchangeable.heroImages.developer_dark,
     };
 };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
 import { useHeroContent } from '../../content/Contents';
@@ -21,7 +20,7 @@ function Hero() {
                             data-aos-once="true"
                             className="text-xl sm:text-2xl lg:text-4xl text-theme_fg_copy"
                         >
-                            <Trans i18nKey="heading" values={{ name: "Ziya Kasgari" }}>
+                            <Trans i18nKey="heading">
                                 {textContent.heading}
                             </Trans>
                         </h1>
