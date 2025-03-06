@@ -2,7 +2,7 @@ import axios from "axios";
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const api = axios.create({
-    baseURL: "http://localhost:8080/api/v1/uydev/message",
+    baseURL: "https://api.etlasturizm.com/api/v1/uydev/message",
     headers: {
         "Content-Type": "application/json",
     },
