@@ -20,9 +20,6 @@ const Contact = () => {
 
   const messageSendingError = t('messageSendingError', { 'invalidEmail': invalidEmail });
 
-  console.log("****** messageSendingError: ", messageSendingError);
-  console.log("invalidEmail: ", invalidEmail);
-
   const dispatch = useDispatch();
 
 

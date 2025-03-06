@@ -19,7 +19,6 @@ function Wrapper() {
             <Helmet>
                 <title>{unchangeable.heroHeader}</title>
                 <meta name="description" content="Portfolio" />
-                <link rel="canonical" href="" />
             </Helmet>
 
             <SocialMediaIcons />

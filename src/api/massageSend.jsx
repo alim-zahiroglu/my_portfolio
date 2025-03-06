@@ -16,7 +16,6 @@ export const sendMessage = createAsyncThunk("message/send", async (message, { re
         const response = await api.post("/send", message);
 
         if (!response.data.success) {
-            console.log("response.data.message", response.data.message);
             return rejectWithValue(response.data.message);
         }
         return response.data.data;
