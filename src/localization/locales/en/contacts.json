@@ -9,5 +9,7 @@
     "nameError": "Name must be at least 2 characters long",
     "emailError": "Please enter a valid email address",
     "messageError": "Message cannot be blank",
-    "successMessage": "Message sent successfully"
+    "successMessage": "Message sent successfully",
+    "sendMessageError": "Failed to send message try again later",
+    "messageSendingError": "The email '<strong>{{invalidEmail}}</strong>' does not exist"
 }
