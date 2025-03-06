@@ -33,7 +33,7 @@ const senMessageSlice = createSlice({
             state.isError = true;
             state.isMessageSent = false;
 
-            if (action.payload === "Connection Error") {
+            if (action.payload === "Connection Error" || action.payload === "Something went wrong") {
                 state.invalidEmail = null;
             }
             else {
