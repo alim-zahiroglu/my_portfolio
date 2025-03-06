@@ -1,10 +1,31 @@
 
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react";
 import { useContact } from "../../content/Contents";
+import { useDispatch, useSelector } from "react-redux";
+import { sendMessage } from "../../api/massageSend";
+import { CircularProgress } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { resetState } from "../../redux/slice/MailSendSlice";
+import parse from 'html-react-parser';
 
 const Contact = () => {
+
+  const invalidEmail = useSelector((store) => store.messageSender.invalidEmail);
+  const isError = useSelector((store) => store.messageSender.isError);
+  const isLoading = useSelector((store) => store.messageSender.isLoading);
+  const isMessageSent = useSelector((store) => store.messageSender.isMessageSent);
+
+  const { t } = useTranslation('contact');
+
+  const messageSendingError = t('messageSendingError', { 'invalidEmail': invalidEmail });
+
+  console.log("****** messageSendingError: ", messageSendingError);
+  console.log("invalidEmail: ", invalidEmail);
+
+  const dispatch = useDispatch();
+
+
   const {
     title,
     subtitle,
@@ -14,12 +35,14 @@ const Contact = () => {
     nameError,
     emailError,
     messageError,
+    sendMessageError,
     social_media,
     sendbutton,
   } = useContact();
 
   const form = useRef();
   const [showSuccess, setShowSuccess] = useState(false);
+
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -29,71 +52,79 @@ const Contact = () => {
   const inputsCss =
     "text-xl border p-3 rounded-md bg-theme_fg focus:outline-none focus:border-primary w-full";
 
-  const sendEmail = (e) => {
+  const validateForm = (field, value) => {
+
+    let newErrors = { ...errors };
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (field === "from_name") {
+      newErrors.name = value.trim().length < 2 ? nameError : "";
+    }
+    if (field === "user_email") {
+      newErrors.email = !emailPattern.test(value.trim()) ? emailError : "";
+    }
+    if (field === "message") {
+      newErrors.message = value.trim().length === 0 ? messageError : "";
+    }
+
+    setErrors(newErrors);
+  };
+
+  // Handle input changes and validate live
+  const handleInputChange = (e) => {
+    dispatch(resetState());
+    const { name, value } = e.target;
+    validateForm(name, value);
+  };
+
+  // Validate entire form before submission
+  const checkFormValidity = () => {
+    const name = form.current.from_name.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    let newErrors = {
+      name: name.length < 2 ? nameError : "",
+      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? emailError : "",
+      message: message.length === 0 ? messageError : "",
+    };
+
+    setErrors(newErrors);
+
+    const isValid = !newErrors.name && !newErrors.email && !newErrors.message;
+    return isValid;
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (!checkFormValidity()) return; // Stop if form is invalid
 
     const name = form.current.from_name.value.trim();
     const email = form.current.user_email.value.trim();
     const message = form.current.message.value.trim();
 
-    let newErrors = { name: "", email: "", message: "" };
-    let isValid = true;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const requestData = {
+      name: name,
+      from: email,
+      subject: "New Message From Your Portfolio",
+      body: message,
+    };
 
-    if (name.length < 2) {
-      newErrors.name = nameError;
-      isValid = false;
-    } else if (!emailPattern.test(email)) {
-      newErrors.email = emailError;
-      isValid = false;
-    } else if (message.length === 0) {
-      newErrors.message = messageError;
-      isValid = false;
-    }
-    setErrors(newErrors);
+    await dispatch(sendMessage(requestData)).unwrap();
 
-    if (!isValid) return;
+    // Clear form before showing success message
+    form.current.reset();
+    dispatch(resetState());
 
-    setErrors({ name: "", email: "", message: "" });
+    setShowSuccess(true);
 
-    const serviceID = "service_ocse6uu";
-    const templateID = "template_t8ge4sq";
-    const publicKey = "feNAFHh_unmTCAfe-";
-
-    const formData = new FormData(e.target);
-
-    emailjs
-      .sendForm(serviceID, templateID, e.target, publicKey)
-      .then(() => {
-        console.log("Message sent to admin!");
-
-        // Clear form before showing success message
-        form.current.reset();
-
-        // Show success message
-        setShowSuccess(true);
-
-        // Auto-hide success message after 2 seconds
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 2000);
-
-        emailjs
-          .send(
-            serviceID,
-            "template_olxy2b8",
-            {
-              user_email: formData.get("user_email"),
-              from_name: formData.get("from_name"),
-              message: formData.get("message"),
-            },
-            publicKey
-          )
-          .then(() => console.log("Auto-reply sent!"))
-          .catch((error) => console.log("Auto-reply failed:", error));
-      })
-      .catch((error) => console.log("Message sending failed:", error));
+    // Auto-hide success message after 2 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 2000);
   };
+
 
   return (
     <section className="bg-theme_fg" id="contact">
@@ -118,16 +149,27 @@ const Contact = () => {
               {errors && (
                 <p className="text-red-500 -mb-3">
                   {errors.name
-                    ? errors.name
+                    ? nameError
                     : errors.email
-                      ? errors.email
-                      : errors.message}
+                      ? emailError
+                      : errors.message
+                        ? messageError
+                        : ""}
                 </p>
               )}
+
+              {isError && !errors.name && !errors.email && !errors.message && (
+                <p className="text-red-500 -mb-3">
+                  {invalidEmail ? parse(messageSendingError) : sendMessageError}
+                </p>
+              )}
+
+
             </div>
 
             <form
               ref={form}
+              onChange={handleInputChange}
               onSubmit={sendEmail}
               data-aos="fade-up"
               className="flex-1 flex flex-col gap-5"
@@ -147,9 +189,10 @@ const Contact = () => {
               <div>
                 <input
                   type="text"
+                  onChange={handleInputChange}
                   name="user_email"
                   placeholder={emailfiled}
-                  className={`${inputsCss} ${!errors.name && errors.email ? "border-red-500" : "border-theme_border"
+                  className={`${inputsCss} ${!errors.name && errors.email || isError && isMessageSent ? "border-red-500" : "border-theme_border"
                     }`}
                 />
               </div>
@@ -158,6 +201,7 @@ const Contact = () => {
               <div>
                 <textarea
                   name="message"
+                  onChange={handleInputChange}
                   placeholder={messagefiled}
                   className={`${inputsCss} ${!errors.name && !errors.email && errors.message
                     ? "border-red-500"
@@ -165,11 +209,27 @@ const Contact = () => {
                     }`}
                 ></textarea>
               </div>
+              <div className="flex flex-grow">
+                <div className="flex flex-row overflow-hidden relative ">
+                  {/* Submit Button */}
+                  <button className="btn self-start bg-primary text-xl hover:bg-primary_dark text-primary_content px-8 py-2 rounded-md rounded-br-[20px] border border-theme_border">
+                    {sendbutton}
+                  </button>
 
-              {/* Submit Button */}
-              <button className="btn self-start bg-primary text-xl hover:bg-primary_dark text-primary_content px-8 py-2 rounded-md rounded-br-[20px] border border-theme_border">
-                {sendbutton}
-              </button>
+                  {/* Loading Overlay */}
+                  {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-theme_bg/20 z-10 px-8 py-2 rounded-md rounded-br-[20px]">
+                      <CircularProgress
+                        color="inherit"
+                        size={24} // Optional: Adjust size to match button height for aesthetic alignment
+                      />
+                    </div>
+                  )}
+
+                </div>
+              </div>
+
+
             </form>
           </div>
 
@@ -220,3 +280,5 @@ const SuccessAlert = () => {
 };
 
 export default Contact;
+
+
