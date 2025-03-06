@@ -7,7 +7,7 @@ import { sendMessage } from "../../api/massageSend";
 import { CircularProgress } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { resetState } from "../../redux/slice/MailSendSlice";
-import parse from 'html-react-parser';
+import { Trans } from 'react-i18next';
 
 const Contact = () => {
 
@@ -160,7 +160,7 @@ const Contact = () => {
 
               {isError && !errors.name && !errors.email && !errors.message && (
                 <p className="text-red-500 -mb-3">
-                  {invalidEmail ? parse(messageSendingError) : sendMessageError}
+                  {invalidEmail ? (<Trans i18nKey={"invalidEmail"}>{messageSendingError}</Trans>) : sendMessageError}
                 </p>
               )}
 
@@ -221,7 +221,7 @@ const Contact = () => {
                     <div className="absolute inset-0 flex items-center justify-center bg-theme_bg/20 z-10 px-8 py-2 rounded-md rounded-br-[20px]">
                       <CircularProgress
                         color="inherit"
-                        size={24} // Optional: Adjust size to match button height for aesthetic alignment
+                        size={24}
                       />
                     </div>
                   )}

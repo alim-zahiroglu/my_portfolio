@@ -2,11 +2,11 @@
     "logoName": "Alim",
     "heroHeader": "Alim Zahiroglu",
     "projectsImages": {
-        "Ticketing App": "/src/assets/images/projects/ui-project-1.jpg",
-        "Accounting App": "/src/assets/images/projects/ui-project-2.jpg",
-        "Ecommerce Backend Project": "/src/assets/images/projects/web-project-1.jpg",
-        "Etlas Business Management App": "/src/assets/images/projects/web-project-2.jpg",
-        "default": "/src/assets/images/projects/default.jpg"
+        "Ticketing App": "/images/projects/ui-project-1.jpg",
+        "Accounting App": "/images/projects/ui-project-2.jpg",
+        "Ecommerce Backend Project": "/images/projects/web-project-1.jpg",
+        "Etlas Business Management App": "/images/projects/web-project-2.jpg",
+        "default": "/images/projects/default.jpg"
     },
     "gitHubLinkForProject": {
         "Ticketing App": "https://github.com/alim-zahiroglu/ticketing-applicaton",
@@ -19,14 +19,14 @@
         "Ticketing App": "https://ticketing.uydev.net",
         "Accounting App": "https://accounting.uydev.net",
         "Ecommerce Backend Project": "https://ecommerce.uydev.net",
-        "Etlas Business Management App": "https://etlas.uydev.net",
+        "Etlas Business Management App": "https://old.etlasturizm.com",
         "default": "https://uydev.net"
     },
     "skillsLogos": {
-        "002": "/src/assets/images/skills/react.png",
-        "003": "/src/assets/images/skills/ps.png",
-        "001": "/src/assets/images/skills/backend.png",
-        "default": "/src/assets/images/skills/backend.png"
+        "002": "/images/skills/react.png",
+        "003": "/images/skills/ps.png",
+        "001": "/images/skills/backend.png",
+        "default": "/images/skills/backend.png"
     },
     "socialMediaLinks": [
         {
@@ -63,6 +63,10 @@
         "002": "fa-solid:laptop-code",
         "003": "fa6-solid:paintbrush",
         "default": "solar:code-square-broken"
+    },
+    "heroImages": {
+        "developer_dark": "/images/hero/developer-dark.svg",
+        "developer": "/images/hero/developer.svg"
     },
     "languages": [
         "en",
