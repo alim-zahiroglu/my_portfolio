@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Header from './header/Header'
 import Hero from './hero/Hero'
 import PopupMenue from './PopupMenue'
@@ -9,11 +9,19 @@ import ThemeIcons from './themes/ThemeIcons'
 import Contact from './contact/Contact'
 import Footer from './Footer'
 import Services from './services/services'
+import { Helmet } from "react-helmet-async";
+import unchangeable from '../localization/locales/en/unchangeable.json';
 
 function Wrapper() {
 
     return (
         <>
+            <Helmet>
+                <title>{unchangeable.heroHeader}</title>
+                <meta name="description" content="Portfolio" />
+                <link rel="canonical" href="" />
+            </Helmet>
+
             <SocialMediaIcons />
             <ThemeIcons />
             <Header />
@@ -24,6 +32,7 @@ function Wrapper() {
             <Contact />
             <Footer />
             <PopupMenue />
+
         </>
     )
 }
