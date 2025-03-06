@@ -66,7 +66,7 @@ export const useProjectsContent = () => {
     return {
         title: t('title'),
         subtitle: t('subtitle'),
-        projects: t('projects', { returnObjects: true }).map((project, index) => ({
+        projects: t('projects', { returnObjects: true }).map((project) => ({
             title: project.title,
             description: project.description,
             image: getImageForProject(project.title),  // Customize this based on project title or other criteria
@@ -229,10 +229,6 @@ export const popupSocialMedia = [
         link: "mailto:" + unchangeable.contacts.email,
     }
 ];
-
-const getSocialMediaIcon = (text) => {
-    return unchangeable.popupIcons[text] || unchangeable.popupIcons["default"];
-};
 
 
 export const popUpMenuecontent = {

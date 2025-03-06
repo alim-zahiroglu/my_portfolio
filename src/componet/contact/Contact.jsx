@@ -14,7 +14,6 @@ const Contact = () => {
     nameError,
     emailError,
     messageError,
-    successMessage,
     social_media,
     sendbutton,
   } = useContact();
@@ -202,6 +201,7 @@ const Contact = () => {
 
 // Success Alert Component (Message Above Form)
 const SuccessAlert = () => {
+  const { successMessage } = useContact();
   return (
     <div
       className="bg-secondary text-secondary_content border border-theme_border shadow-lg px-5 py-2 rounded-md flex items-center space-x-4 z-50 transition-all duration-500 ease-out opacity-100 scale-100"
