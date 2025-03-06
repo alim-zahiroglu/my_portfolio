@@ -37,7 +37,6 @@ const senMessageSlice = createSlice({
                 state.invalidEmail = null;
             }
             else {
-                console.log("first action.payload: ", action.payload);
                 state.invalidEmail = action.payload;
             }
 
