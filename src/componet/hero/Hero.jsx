@@ -39,11 +39,20 @@ function Hero() {
                             className='mt-4 shadow-md'
                         >
                             <button
+                                onClick={() => {
+                                    const link = document.createElement('a');
+                                    link.href = '/files/Alim_JAVA_BackEnd_CV.pdf';
+                                    link.download = 'Alim_JAVA_BackEnd_CV.pdf';
+                                    document.body.appendChild(link);
+                                    link.click();
+                                    document.body.removeChild(link);
+                                }}
                                 className="flex items-center gap-2 text-md sm:text-xl bg-primary hover:scale-105 duration-200 text-primary_content py-3 px-4 sm:py-4 sm:px-6 rounded-md hover:bg-primary_dark"
                             >
                                 <FiArrowDownCircle className="text-xl sm:text-2xl" />
                                 {textContent.buttonText}
                             </button>
+
                         </div>
                     </div>
 
