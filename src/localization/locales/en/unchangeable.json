@@ -47,7 +47,7 @@
     ],
     "popupIcons": {
         "Github": "proicons:github",
-        "LinkedIn": "basil:linkedin-outline",
+        "Linkedin": "basil:linkedin-outline",
         "YouTube": "basil:youtube-outline",
         "default": "basil:youtube-outline"
     },

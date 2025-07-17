@@ -17,13 +17,13 @@ const LangSwicher = () => {
 
     return (
         <div className="relative inline-block">
-            <div
+            <button
                 className="text-secondary font-bold cursor-pointer sm:px-2 py-2"
                 onMouseEnter={() => setShowDropdown(true)}
                 onMouseLeave={() => setShowDropdown(false)}
             >
                 {i18n.language.toUpperCase().split("-")[0]}
-            </div>
+            </button>
 
 
             {showDropdown && (

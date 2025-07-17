@@ -1,4 +1,10 @@
 {
-    "title": "Projects",
-    "subtitle": "Some of my recent projects"
+    "logoLetter": "{{logoName}}",
+    "headerMenu": {
+        "aboutMe": "About Me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "services": "Services",
+        "contacts": "Contacts"
+    }
 }
