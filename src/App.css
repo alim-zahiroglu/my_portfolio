@@ -532,3 +532,16 @@ input:-webkit-autofill:focus {
     color: rgba(var(--copy), 1);
     /* Text color */
 }
+
+/* Only disable selection and caret in non-input areas */
+p,
+h1,
+h2,
+h3,
+h4,
+img,
+span,
+button,
+a {
+    caret-color: transparent;
+}
